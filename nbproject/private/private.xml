@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/notification/TaskList.jsp</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/model/notification/InBox.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/model/icds/ICDSModel.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/controller/notification/OutboxController.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/notification/OutBoxList.jsp</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/controller/icds/projects/ICDSProjectsController.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/dao/notification/NotificationDaoImpl.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/dao/notification/NotificationDao.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/notification/ToDoList.jsp</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/notification/OutBoxRespondentsList.jsp</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/dao/icds/ICDSDAOImpl.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/icds/ICDSSanctionPost.jsp</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/src/java/dricds/controller/notification/InboxController.java</file>
+            <file>file:/Users/ekank/NetBeansProjects/RAJICDS/web/WEB-INF/jsp/notification/SendNotification.jsp</file>
+        </group>
+    </open-files>
+</project-private>

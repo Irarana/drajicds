@@ -1,0 +1,28 @@
+<div class="p-10">  
+	<h3>Select Chart Type</h3>                                                            
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="barchart_div"><img src="img/icons/bar.jpg" alt="BarChart"/>
+		
+		</div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="columnchart_div"><img src="img/icons/column.jpg" alt="ColumnChart"/></div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">                        
+		<div id="piechart_div"><img src="img/icons/pie.jpg" alt="PieChart"/></div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="donutchart_div"><img src="img/icons/donut.jpg" alt="DonutChart"/></div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="stackchart_div"><img src="img/icons/stacked.jpg" alt="StackChart"/></div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="tablechart_div"><img src="img/icons/datatable.jpg" alt="TableChart"/></div>
+	</div>
+	<div class="draggable col-xs-4 p5 mt5 mb5">
+		<div id="linechart_div"><img src="img/icons/line.jpg" alt="LineChart"/></div>
+	</div>
+</div>
+
+<script src="report/report.js"></script>

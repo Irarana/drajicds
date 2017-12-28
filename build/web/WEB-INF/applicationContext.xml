@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+    <tx:annotation-driven/>
+    <!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+    up static resources in the ${webappRoot}/resources directory -->
+       
+    <!--    
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="jdbc/DRICDS"></property>
+        <property name="resourceRef" value="true" />
+    </bean>-->
+    
+    
+    <bean id="dataSource"  
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+        <property name="url" value="jdbc:mysql://:3306/rajicds?characterEncoding=UTF-8" />  
+        <property name="username" value="root" />  
+        <property name="password" value="root" />  
+    </bean>   
+
+   
+        
+    <bean id="awcDao" class="dricds.dao.awc.AwcDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+ 
+    <bean id="tcDao" class="dricds.dao.training.TrainingCenterDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+ 
+    <bean id="adStaffDao" class="dricds.dao.adminstaff.AdminStaffDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="tcTypeDao" class="dricds.dao.tctype.TCTypeDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="districtDao" class="dricds.dao.district.DistrictDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+
+    <bean id="classFurnitureTypeDao" class="dricds.dao.classfurniture.ClassFurnitureDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="classFacilityDao" class="dricds.dao.classfacility.ClassFacilityDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="trainingEqipmentDao" class="dricds.dao.trainiingequipment.TrainingEquipmentDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="officeEqipmentDao" class="dricds.dao.officeEquipment.OfficeEquipmentDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="bookNosDao" class="dricds.dao.booknos.BookNosDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="hostelProximityDao" class="dricds.dao.hostel.HostelProximityDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="roomTypeDao" class="dricds.dao.roomtype.RoomTypeDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="hostelFacilityDao" class="dricds.dao.hostel.HostelFacilityDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="medicalCareDao" class="dricds.dao.medicalcare.MedicalCareDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="frontlineWorkerDao" class="dricds.dao.frontlineWorker.FrontlineWorkerDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="categoryDao" class="dricds.dao.category.CategoryDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="eduDaO" class="dricds.dao.education.EducationDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="desigDao" class="dricds.dao.designation.DesignationDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="relationDao" class="dricds.dao.relation.RelationDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    
+    
+    <bean id="trainerDesigDao" class="dricds.dao.trainerdesignation.TrainerDesignationDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+
+    <bean id="trainerEduLevelDao" class="dricds.dao.traineredulevel.TrainerEducationLevelDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="trainerEduSubDao" class="dricds.dao.traineredusubject.TrainerEducationalSubjectDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="trainerProfEduDao" class="dricds.dao.trainerprofeducation.TrainerProfessionalEducationDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+
+    <bean id="trainerMasterDao" class="dricds.dao.trainermaster.TrainerMasterDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="trainerExpDao" class="dricds.dao.trainerexperience.TrainerExperienceDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="teachSubDao" class="dricds.dao.teachingsubject.TeachingSubjectDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="nandgharDao" class="dricds.dao.nandghar.NandGharDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    <bean id="mouTypeDao" class="dricds.dao.moutype.MouTypeDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="awcCoverageDao" class="dricds.dao.awc.AwcCoverageDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="loginDao" class="dricds.dao.login.LoginDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="blockDao" class="dricds.dao.block.BlockDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="gpDao" class="dricds.dao.gp.GPDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="projectDao" class="dricds.dao.project.ProjectDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="sectorDao" class="dricds.dao.sector.SectorDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="maxcodeDao" class="dricds.dao.maxcode.MaxCodeDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+
+    
+    
+    
+    
+    
+    <bean id="entityListDao" class="dricds.dao.entitylist.EntityListDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+        <property name="requestContextAttribute" value="request"/>
+        <property name="contentType" value="text/html;charset=UTF-8"></property>
+    </bean>
+    <bean id="projectMonDAO" class="dricds.dao.project.ProjectMonDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    <bean id="packageDAO" class="dricds.dao.project.PackageDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+    </bean>
+    
+    <bean id="icdsDao" class="dricds.dao.icds.ICDSDAOImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+        <property name = "transactionManager" ref = "transactionManager" />    
+    </bean>
+    
+    <bean id="notificationDao" class="dricds.dao.notification.NotificationDaoImpl">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+        <property name = "transactionManager" ref = "transactionManager" />  
+    </bean>
+    
+    <!-- Initialization for TransactionManager -->
+    <bean id = "transactionManager" 
+          class = "org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name = "dataSource"  ref = "dataSource" />    
+    </bean>
+</beans>
